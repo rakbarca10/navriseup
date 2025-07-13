@@ -1,6 +1,5 @@
 .achievement-section {
     padding: 40px 20px;
-    height: 42vh;
     background-color: #161616;
     color: white;
     text-align: center;
@@ -19,12 +18,33 @@
     color: rgb(241, 241, 241);
 }
 
+/* New flex container for achievements */
+.achievement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
 .achievement {
-    display: inline-block;
-    margin: 20px;
+    flex: 1 1 200px;
+    max-width: 220px;
+    padding: 15px 10px;
+    box-sizing: border-box;
     font-size: 1.5rem;
     color: rgb(255, 221, 0);
     text-align: center;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 221, 0, 0.3);
 }
 
 .count {
@@ -33,6 +53,7 @@
     font-weight: bold;
     color: rgb(255, 221, 0);
     border-bottom: 1px solid white;
+    padding-bottom: 5px;
 }
 
 .label {
@@ -42,50 +63,57 @@
     color: #a1a1a1;
 }
 
+/* Tablet screens */
 @media (max-width: 768px) {
     .achievement-section {
-        height: auto; /* Allow height to adjust for mobile */
         padding: 30px 15px;
     }
 
     .achievement-heading {
-        font-size: 1.8rem; /* Smaller font for heading on mobile */
+        font-size: 1.8rem;
         margin-bottom: 20px;
     }
 
+    .achievement-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .achievement {
-        margin: 10px; /* Reduce margin between achievement items */
-        font-size: 1.2rem; /* Smaller font for achievement text */
+        max-width: 90%;
+        width: 100%;
+        font-size: 1.3rem;
     }
 
     .count {
-        font-size: 2rem; /* Adjust the number font size */
+        font-size: 2rem;
     }
 
     .label {
-        font-size: 0.9rem; /* Adjust label font size */
+        font-size: 0.9rem;
     }
 }
 
+/* Mobile screens */
 @media (max-width: 480px) {
     .achievement-section {
-        padding: 20px 10px; /* Further reduce padding for smaller screens */
+        padding: 20px 10px;
     }
 
     .achievement-heading {
-        font-size: 1.5rem; /* Further reduce heading size */
+        font-size: 1.5rem;
     }
 
     .achievement {
-        margin: 8px; /* Less margin for small screens */
-        font-size: 1rem; /* Smaller font for achievement text */
+        font-size: 1.1rem;
+        margin: 10px 0;
     }
 
     .count {
-        font-size: 1.8rem; /* Smaller count text for compact display */
+        font-size: 1.8rem;
     }
 
     .label {
-        font-size: 0.8rem; /* Smaller label text */
+        font-size: 0.85rem;
     }
 }
