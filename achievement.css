@@ -18,7 +18,7 @@
     color: rgb(241, 241, 241);
 }
 
-/* New flex container for achievements */
+/* Flex container for layout */
 .achievement-container {
     display: flex;
     flex-wrap: wrap;
@@ -31,20 +31,11 @@
 .achievement {
     flex: 1 1 200px;
     max-width: 220px;
-    padding: 15px 10px;
+    padding: 10px;
     box-sizing: border-box;
     font-size: 1.5rem;
     color: rgb(255, 221, 0);
     text-align: center;
-    background-color: #1f1f1f;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.achievement:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(255, 221, 0, 0.3);
 }
 
 .count {
