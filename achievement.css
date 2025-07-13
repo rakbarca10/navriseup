@@ -1,5 +1,5 @@
 .achievement-section {
-    padding: 40px 20px;
+    padding: 30px 15px;
     background-color: #161616;
     color: white;
     text-align: center;
@@ -14,11 +14,10 @@
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-size: 2.3rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: rgb(241, 241, 241);
 }
 
-/* Flex container for layout */
 .achievement-container {
     display: flex;
     flex-wrap: wrap;
@@ -31,49 +30,51 @@
 .achievement {
     flex: 1 1 200px;
     max-width: 220px;
-    padding: 10px;
+    padding: 8px;
     box-sizing: border-box;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: rgb(255, 221, 0);
     text-align: center;
 }
 
 .count {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: bold;
     color: rgb(255, 221, 0);
     border-bottom: 1px solid white;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
 }
 
 .label {
-    margin-top: 5px;
+    margin-top: 4px;
     display: block;
     font-size: 1rem;
     color: #a1a1a1;
 }
 
-/* Tablet screens */
+/* Tablet */
 @media (max-width: 768px) {
     .achievement-section {
-        padding: 30px 15px;
+        padding: 25px 12px;
     }
 
     .achievement-heading {
         font-size: 1.8rem;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     .achievement-container {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     .achievement {
-        max-width: 90%;
-        width: 100%;
-        font-size: 1.3rem;
+        max-width: 100%;
+        font-size: 1.2rem;
+        padding: 6px 0;
+        max-height: 100px;
     }
 
     .count {
@@ -85,7 +86,7 @@
     }
 }
 
-/* Mobile screens */
+/* Mobile */
 @media (max-width: 480px) {
     .achievement-section {
         padding: 20px 10px;
@@ -93,15 +94,23 @@
 
     .achievement-heading {
         font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .achievement-container {
+        gap: 10px;
     }
 
     .achievement {
         font-size: 1.1rem;
-        margin: 10px 0;
+        margin: 0;
+        padding: 4px 0;
+        height: max-content;
+        max-height: 100px;
     }
 
     .count {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .label {
