@@ -3,7 +3,7 @@
     padding-bottom: 20px;
     min-height: fit-content;
     height: 110vh;
-    background: url('images/hero_3.jpg') no-repeat center center;
+    background: url('../../images/hero_3.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
