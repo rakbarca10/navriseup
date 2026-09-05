@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow system or hidden directories
+Disallow: /.git/
+Disallow: /.DS_Store
+
+# Sitemap location
+Sitemap: https://navriseup.org/sitemap.xml
