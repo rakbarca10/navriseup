@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Google Tag Manager --> 
@@ -59,6 +59,20 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     
+    <!-- Preloader with Logo -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo-wrap">
+          <div class="preloader-spinner"></div>
+          <img src="images/logo.png" alt="Navriseup Logo" class="preloader-logo" />
+        </div>
+        <div class="preloader-title">Navriseup India Care</div>
+        <div class="preloader-bar">
+          <div class="preloader-progress"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Lower Navbar -->
     <header class="main-navbar">
         <div class="container-nav">
@@ -106,55 +120,155 @@
                     Through each of these initiatives, we aim to create long-lasting impact, uplift lives, and foster a society where every individual has the opportunity to thrive.</p>
             </div>
             <div class="featured">
+                <div class="section-tag-wrapper">
+                    <span class="section-tag"><i class="fa-solid fa-hand-holding-heart"></i> Make An Impact</span>
+                </div>
                 <h2 class="heading">Featured Causes</h2>
                 <div class="featured-causes-div">
                     <div class="cause-box" id="cause1">
-                        <img src="images/animal2.webp" alt="Cause 1" class="cause-image">
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 15%;"></div> 
+                        <div class="cause-image-wrapper">
+                            <img src="images/animal2.webp" alt="Animal Welfare Initiative" class="cause-image">
+                            <span class="cause-badge badge-animal"><i class="fa-solid fa-paw"></i> Animal Care</span>
+                            <span class="tax-badge"><i class="fa-solid fa-shield-heart"></i> 80G Tax Benefit</span>
                         </div>
-                        <h3>Supporting Tails, Transforming Lives: Donate for Animal Welfare</h3>
-                        <p>Raised : Rs 3000 / Rs 20000</p>
-                        <p class="cause-description">Join us in protecting and caring for our furry friends – donate for animal welfare today.</p>
-                        <form class="donate-form"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NFtL5LKKQUqc7q" async> </script> </form>
+                        <div class="cause-content">
+                            <h3 class="cause-title">Supporting Tails, Transforming Lives: Animal Welfare</h3>
+                            <p class="cause-description">Join us in rescuing, treating, and nourishing stray and injured animals with essential food, medical care, and warmth.</p>
+                            
+                            <div class="cause-progress-wrapper">
+                                <div class="progress-stats">
+                                    <div class="stat-group">
+                                        <span class="stat-label">Raised</span>
+                                        <span class="stat-value raised-val">₹14,500</span>
+                                    </div>
+                                    <span class="percent-badge">72%</span>
+                                    <div class="stat-group text-right">
+                                        <span class="stat-label">Goal</span>
+                                        <span class="stat-value goal-val">₹20,000</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 72%;"></div> 
+                                </div>
+                            </div>
+
+                            <div class="cause-action">
+                                <form class="donate-form"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NFtL5LKKQUqc7q" async> </script> </form>
+                                <a href="https://rzp.io/l/navriseup" class="direct-donate-btn"><i class="fa-solid fa-heart"></i> Donate Now</a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="cause-box" id="cause2">
-                        <img src="images/kid_studying.jpg" alt="Cause 1" class="cause-image">
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 15%;"></div> <!-- Example donation progress -->
+                        <div class="cause-image-wrapper">
+                            <img src="images/kid_studying.jpg" alt="Child Education Program" class="cause-image">
+                            <span class="cause-badge badge-edu"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+                            <span class="tax-badge"><i class="fa-solid fa-shield-heart"></i> 80G Tax Benefit</span>
                         </div>
-                        <h3>Secure a child's future</h3>
-                        <p>Raised : Rs 3000 / Rs 20000</p>
-                        <p class="cause-description">Empower a child's future with your donation – support their education today.</p>
-                        <form class="donate-form"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NFtL5LKKQUqc7q" async> </script> </form>
+                        <div class="cause-content">
+                            <h3 class="cause-title">Secure a Child's Future: Sponsor Slum Education</h3>
+                            <p class="cause-description">Empower underprivileged children with books, tuition support, stationery kits, and school supplies for a brighter tomorrow.</p>
+                            
+                            <div class="cause-progress-wrapper">
+                                <div class="progress-stats">
+                                    <div class="stat-group">
+                                        <span class="stat-label">Raised</span>
+                                        <span class="stat-value raised-val">₹17,200</span>
+                                    </div>
+                                    <span class="percent-badge">68%</span>
+                                    <div class="stat-group text-right">
+                                        <span class="stat-label">Goal</span>
+                                        <span class="stat-value goal-val">₹25,000</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 68%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="cause-action">
+                                <form class="donate-form"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NFtL5LKKQUqc7q" async> </script> </form>
+                                <a href="https://rzp.io/l/navriseup" class="direct-donate-btn"><i class="fa-solid fa-heart"></i> Donate Now</a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="cause-box" id="cause3">
-                        <img src="images/kid_eating.webp" alt="Cause 1" class="cause-image">
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 15%;"></div> <!-- Example donation progress -->
+                        <div class="cause-image-wrapper">
+                            <img src="images/kid_eating.webp" alt="Hunger Relief and Nutrition" class="cause-image">
+                            <span class="cause-badge badge-hunger"><i class="fa-solid fa-bowl-rice"></i> Hunger Relief</span>
+                            <span class="tax-badge"><i class="fa-solid fa-shield-heart"></i> 80G Tax Benefit</span>
                         </div>
-                        <h3>Feed Hope: Your Donation Sustains Lives</h3>
-                        <p>Raised : Rs 3000 / Rs 20000</p>
-                        <p class="cause-description">Help fill empty plates and hungry hearts – donate for those in need of a meal today.
-                        </p>
-                        <form class="donate-form"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NFtL5LKKQUqc7q" async> </script> </form>
+                        <div class="cause-content">
+                            <h3 class="cause-title">Feed Hope: Daily Nutrition for Hungry Children</h3>
+                            <p class="cause-description">Help fill empty plates and provide daily wholesome meals, ration kits, and nutritional snacks to children in need.</p>
+                            
+                            <div class="cause-progress-wrapper">
+                                <div class="progress-stats">
+                                    <div class="stat-group">
+                                        <span class="stat-label">Raised</span>
+                                        <span class="stat-value raised-val">₹18,500</span>
+                                    </div>
+                                    <span class="percent-badge">92%</span>
+                                    <div class="stat-group text-right">
+                                        <span class="stat-label">Goal</span>
+                                        <span class="stat-value goal-val">₹20,000</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 92%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="cause-action">
+                                <form class="donate-form"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NFtL5LKKQUqc7q" async> </script> </form>
+                                <a href="https://rzp.io/l/navriseup" class="direct-donate-btn"><i class="fa-solid fa-heart"></i> Donate Now</a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="cause-box" id="cause4">
-                        <img src="images/seniot.jpg" alt="Cause 1" class="cause-image">
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 15%;"></div> <!-- Example donation progress -->
+                        <div class="cause-image-wrapper">
+                            <img src="images/seniot.jpg" alt="Senior Citizen Care" class="cause-image">
+                            <span class="cause-badge badge-senior"><i class="fa-solid fa-hand-holding-hand"></i> Senior Care</span>
+                            <span class="tax-badge"><i class="fa-solid fa-shield-heart"></i> 80G Tax Benefit</span>
                         </div>
-                        <h3>Extend a caring hand to our seniors</h3>
-                        <p>Raised : Rs 3000 / Rs 20000</p>
-                        <p class="cause-description">Contribute to our mission for a dignified life in old age homes</p>
-                        <form class="donate-form"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NFtL5LKKQUqc7q" async> </script> </form>
+                        <div class="cause-content">
+                            <h3 class="cause-title">Extend a Caring Hand: Dignity for Our Seniors</h3>
+                            <p class="cause-description">Contribute towards healthcare supplies, monthly groceries, and compassionate care for elderly individuals in old age homes.</p>
+                            
+                            <div class="cause-progress-wrapper">
+                                <div class="progress-stats">
+                                    <div class="stat-group">
+                                        <span class="stat-label">Raised</span>
+                                        <span class="stat-value raised-val">₹11,000</span>
+                                    </div>
+                                    <span class="percent-badge">55%</span>
+                                    <div class="stat-group text-right">
+                                        <span class="stat-label">Goal</span>
+                                        <span class="stat-value goal-val">₹20,000</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 55%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="cause-action">
+                                <form class="donate-form"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NFtL5LKKQUqc7q" async> </script> </form>
+                                <a href="https://rzp.io/l/navriseup" class="direct-donate-btn"><i class="fa-solid fa-heart"></i> Donate Now</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="other-causes">
-            <div class="headingo heading">Other Causes</div>
+            <div class="section-tag-wrapper">
+                <span class="section-tag"><i class="fa-solid fa-clock-rotate-left"></i> On-Ground Impact</span>
+            </div>
+            <h2 class="headingo heading">Past Drives & Other Causes</h2>
             <div class="timeline">
             <div class=" outer">
                 <div class="container ">
@@ -864,6 +978,23 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Preloader Hide Logic
+        function hidePreloader() {
+            var preloader = document.getElementById("preloader");
+            if (preloader && !preloader.classList.contains("preloader-hidden")) {
+                preloader.classList.add("preloader-hidden");
+                setTimeout(function () {
+                    if (preloader.parentNode) {
+                        preloader.style.display = "none";
+                    }
+                }, 500);
+            }
+        }
+        window.addEventListener("load", function () {
+            setTimeout(hidePreloader, 250);
+        });
+        setTimeout(hidePreloader, 2000);
     </script>
 </body>
 </html>

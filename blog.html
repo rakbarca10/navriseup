@@ -75,6 +75,20 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Preloader with Logo -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo-wrap">
+          <div class="preloader-spinner"></div>
+          <img src="images/logo.png" alt="Navriseup Logo" class="preloader-logo" />
+        </div>
+        <div class="preloader-title">Navriseup India Care</div>
+        <div class="preloader-bar">
+          <div class="preloader-progress"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Lower Navbar -->
     <header class="main-navbar">
       <div class="container-nav">
@@ -154,7 +168,7 @@
         <div class="main-content-area">
           <section class="blog-list-container">
             <!-- Featured SEO Guides -->
-            <div class="blog-card" style="border-left: 4px solid #f26522;">
+            <div class="blog-card">
               <div class="blog-date">
                 <div class="date">04</div>
                 <div class="month">Sept, 2026</div>
@@ -186,7 +200,7 @@
               </div>
             </div>
 
-            <div class="blog-card" style="border-left: 4px solid #f26522;">
+            <div class="blog-card">
               <div class="blog-date">
                 <div class="date">04</div>
                 <div class="month">Sept, 2026</div>
@@ -218,7 +232,7 @@
               </div>
             </div>
 
-            <div class="blog-card" style="border-left: 4px solid #f26522;">
+            <div class="blog-card">
               <div class="blog-date">
                 <div class="date">04</div>
                 <div class="month">Sept, 2026</div>
@@ -250,7 +264,7 @@
               </div>
             </div>
 
-            <div class="blog-card" style="border-left: 4px solid #f26522;">
+            <div class="blog-card">
               <div class="blog-date">
                 <div class="date">04</div>
                 <div class="month">Sept, 2026</div>
@@ -282,7 +296,7 @@
               </div>
             </div>
 
-            <div class="blog-card" style="border-left: 4px solid #f26522;">
+            <div class="blog-card">
               <div class="blog-date">
                 <div class="date">04</div>
                 <div class="month">Sept, 2026</div>
@@ -314,7 +328,7 @@
               </div>
             </div>
 
-            <div class="blog-card" style="border-left: 4px solid #f26522;">
+            <div class="blog-card">
               <div class="blog-date">
                 <div class="date">04</div>
                 <div class="month">Sept, 2026</div>
@@ -2393,6 +2407,23 @@
       function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
+
+      // Preloader Hide Logic
+      function hidePreloader() {
+        var preloader = document.getElementById("preloader");
+        if (preloader && !preloader.classList.contains("preloader-hidden")) {
+          preloader.classList.add("preloader-hidden");
+          setTimeout(function () {
+            if (preloader.parentNode) {
+              preloader.style.display = "none";
+            }
+          }, 500);
+        }
+      }
+      window.addEventListener("load", function () {
+        setTimeout(hidePreloader, 250);
+      });
+      setTimeout(hidePreloader, 2000);
     </script>
   </body>
 </html>
