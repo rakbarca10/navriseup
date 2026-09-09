@@ -2,165 +2,417 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
 }
-/* Causes section */
+
+/* Causes Section */
 .causes-sect {
     display: flex;
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 50px 20px 60px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
 }
 
 .heading {
-    font-weight: bold;
-    color: #2c3e50; 
+    font-weight: 800;
+    color: #0f172a; 
     font-size: 2.5rem; 
-    line-height: 2.7rem;
+    line-height: 1.25;
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
-    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 #upper-sect {
-    margin-bottom: 34px;
-}
-
-.causes-para {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    width: 50vw;
-    max-width: 800px;
-    color: #4d4d4d;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Featured Causes Section */
-.featured-causes-div {
-    padding: 20px;
-    width: 80vw;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    align-content: center;
-}
-
-/* Cause Box Styling */
-.cause-box {
-    border: 1px solid rgba(71, 71, 71, 0.408);
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
-/* Image Styling */
+.causes-para {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    width: 60vw;
+    max-width: 860px;
+    color: #475569;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Section Tag / Badge */
+.section-tag-wrapper {
+    margin-bottom: 12px;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 16px;
+    background: rgba(0, 123, 255, 0.08);
+    color: #007bff;
+    border: 1px solid rgba(0, 123, 255, 0.2);
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Featured Causes Section */
+.featured {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-causes-div {
+    padding: 10px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+/* Modern Cause Box Styling */
+.cause-box {
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    text-align: left;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.cause-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.12), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 123, 255, 0.3);
+}
+
+/* Image Wrapper & Badges */
+.cause-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
 .cause-image {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Progress Bar */
+.cause-box:hover .cause-image {
+    transform: scale(1.06);
+}
+
+.cause-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+}
+
+.badge-animal {
+    background: rgba(254, 243, 199, 0.95);
+    color: #b45309;
+    border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.badge-edu {
+    background: rgba(219, 234, 254, 0.95);
+    color: #1d4ed8;
+    border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.badge-hunger {
+    background: rgba(254, 226, 226, 0.95);
+    color: #b91c1c;
+    border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+.badge-senior {
+    background: rgba(243, 232, 255, 0.95);
+    color: #7e22ce;
+    border: 1px solid rgba(147, 51, 234, 0.25);
+}
+
+.tax-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: rgba(16, 185, 129, 0.95);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 2;
+}
+
+/* Card Content Area */
+.cause-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.cause-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.4;
+    margin: 0 0 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.8rem;
+}
+
+.cause-description {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0 0 18px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+/* Progress Section */
+.cause-progress-wrapper {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-group.text-right {
+    text-align: right;
+}
+
+.stat-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.raised-val {
+    color: #059669;
+}
+
+.goal-val {
+    color: #334155;
+}
+
+.percent-badge {
+    background: #ecfdf5;
+    color: #059669;
+    border: 1px solid rgba(5, 150, 105, 0.2);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
 .progress-bar {
     width: 100%;
-    background-color: #ddd;
-    height: 10px;
-    border-radius: 5px;
-    margin: 10px 0;
+    background-color: #e2e8f0;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
     position: relative;
+    margin: 0;
 }
 
 .progress {
     height: 100%;
-    background-color: #76c7c0;
-    border-radius: 5px;
+    background: linear-gradient(90deg, #10b981 0%, #06b6d4 100%);
+    border-radius: 10px;
+    transition: width 0.8s ease-in-out;
 }
 
-/* Headings */
-h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
+/* Action Area */
+.cause-action {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
 }
 
-/* Amount Raised Paragraph */
-.cause-box p {
-    margin: 5px 0;
-    font-size: 1rem;
+.direct-donate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 11px 16px;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.22);
+    transition: all 0.25s ease;
+    box-sizing: border-box;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+.direct-donate-btn:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.35);
+    color: #ffffff !important;
+}
+
+.direct-donate-btn i {
+    color: #ff4757;
+    transition: transform 0.25s ease;
+}
+
+.direct-donate-btn:hover i {
+    transform: scale(1.2);
+}
+
+.donate-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
     .featured-causes-div {
-        grid-template-columns: 1fr;
-        width: 90vw;
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        gap: 20px;
     }
 
-    .cause-box {
+    .causes-para {
+        width: 75vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .causes-sect {
+        padding: 35px 15px 45px;
+    }
+
+    .featured-causes-div {
+        grid-template-columns: 1fr;
         width: 100%;
+        max-width: 440px;
+        gap: 18px;
     }
 
     .heading {
         font-size: 2rem;
-        line-height: 2.2rem;
+        line-height: 1.25;
+        margin-bottom: 14px;
     }
 
     .causes-para {
-        width: 90vw;
-        font-size: 1rem;
+        width: 100%;
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
-    .cause-box h3 {
-        font-size: 1.3rem;
+    #upper-sect {
+        margin-bottom: 30px;
     }
 
-    .cause-box p {
-        font-size: 0.9rem;
+    .cause-image-wrapper {
+        height: 200px;
     }
 
-    .donate-btn {
-        font-size: 0.9rem;
-        padding: 8px 15px;
+    .cause-title {
+        font-size: 1.1rem;
+        min-height: auto;
     }
 }
 
-/* For Extra Small Devices */
 @media (max-width: 480px) {
     .heading {
-        font-size: 1.8rem;
-        line-height: 2rem;
+        font-size: 1.7rem;
     }
 
     .causes-para {
-        width: 95vw;
         font-size: 0.9rem;
     }
 
-    .cause-box h3 {
-        font-size: 1.2rem;
-    }
-
-    .cause-box p {
-        font-size: 0.8rem;
-    }
-
-    .donate-btn {
-        font-size: 0.8rem;
-        padding: 7px 12px;
+    .cause-content {
+        padding: 16px;
     }
 }
 
