@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2025-03-23",
+    "caption": "Empowering Women Through Awareness! 🌸 On 22nd February, Navriseup India Care Foundation, in collaboration with @pinkishefoundation, successfully organized a Menstrual Hygiene Awareness Session for 110 women, promoting education and open conversations around menstrual health. 💙✨ A heartfelt thank you to @vkr_pratishthan for their invaluable support in making this event a success! 🙌"
+  },
+  {
+    "date": "2025-04-24",
+    "caption": "Empowering Women Through Awareness! 🌸 On 22nd February, Navriseup India Care Foundation, in collaboration with @pinkishefoundation, successfully organized a Menstrual Hygiene Awareness Session for 110 women, promoting education and open conversations around menstrual health. 💙✨ A heartfelt thank you to @vkr_pratishthan for their invaluable support in making this event a success! 🙌"
+  },
+  {
+    "date": "2025-06-18",
+    "caption": "NavRiseUp India Care Foundation, with the incredible support of our dedicated volunteers, proudly distributed exam pads to 50 students at ZP School, Aurangabad! 🌟 Your support helps us empower young minds and brighten futures. 🙏 Thank you to everyone who made this possible!"
+  },
+  {
+    "date": "2025-07-26",
+    "caption": "Providing Shelter from the Storm: We are proud to have donated rain shelters and tarpaulins to families without roofs, ensuring they stay protected during these challenging times. Together, let's continue spreading hope and care to those in need."
+  },
+  {
+    "date": "2025-08-18",
+    "caption": "Empowering Women Through Awareness! 🌸 On 18th July, Navriseup India Care Foundation, in collaboration with @pinkishefoundation, successfully conducted a Menstrual Hygiene Awareness Session in Ghatkopar for 60 women, fostering education, dignity, and open conversations around menstrual health. 💙✨ A heartfelt thank you to @vkr_pratishthan for their incredible support in making this session impactful and inspiring! 🙌"
+  },
+  {
+    "date": "2025-09-01",
+    "caption": "Empowering Women Through Awareness! 🌸 On 5th August, Navriseup India Care Foundation, in collaboration with @pinkishefoundation, successfully conducted Menstrual Hygiene Awareness Sessions in Vidhyavihar and Thane for 80 women, fostering education, dignity, and open conversations around menstrual health. 💙✨ A heartfelt thank you to @vkr_pratishthan for their incredible support in making this session impactful and inspiring! 🙌"
+  },
+  {
+    "date": "2025-09-08",
+    "caption": "Navriseup India Care Foundation, with the incredible support of our dedicated volunteers, proudly distributed exam pads to 30 students at ZP School, Aurangabad! 🌟 Your support helps us empower young minds and brighten futures. 🙏 Thank you to everyone who made this possible"
+  },
+  {
+    "date": "2025-09-20",
+    "caption": "100 school bags and diaries distributed to students in Latur! A huge thank you to Mr. Prakash and Sreelata Ji for their support and contribution. Together, we’re helping students take one more step toward learning with dignity."
+  },
+  {
+    "date": "2025-11-02",
+    "caption": "Grateful to our amazing volunteers who made this possible. We were able to donate notebooks, pens, pencils, and drawing books to 40 kids at ZP School Dakanwadi. Small efforts, big smiles. 💙✏️📚"
+  },
+  {
+    "date": "2025-12-07",
+    "caption": "200 women. One community. Countless conversations that matter. NavRiseUp India Care Foundation, in collaboration with Pinkishe Foundation, organized an awareness and menstrual hygiene session in Kandivali focused on education, dignity, and health. Together, we opened up real discussions around period care, myths, and access—because awareness is the first step toward empowerment. From distributing hygiene kits to addressing questions that often go unspoken, our goal was simple: to make sure every woman feels informed, confident, and supported. Change doesn’t start with a crowd—it starts with a conversation. And today, 200 voices came together to make that happen."
+  },
+  {
+    "date": "2026-01-10",
+    "caption": "Navriseup India Care Foundation, with the support of our volunteers and partners, donated sports materials to help young aspirants preparing for the upcoming Police entrance exams. Many of these boys come from families with limited means, but their grit is unmatched. If they need books for Police Bharti or equipment like shot put for ground practice, we’re here to back them. Small steps, real impact. 👏💙"
+  },
+  {
+    "date": "2026-01-22",
+    "caption": "Brighter classrooms, better futures. 🌟 NavRiseUp India Care Foundation distributed whiteboards to Zilla Parishad school students in Aurangabad, helping teachers make learning more interactive and engaging for every child. Thank you to our volunteers and supporters whose kindness is turning simple classrooms into spaces of curiosity and confidence."
+  },
+  {
+    "date": "2026-04-16",
+    "caption": "Grateful to support the people of Aurangabad. Navriseup India Care Foundation donated blankets to underprivileged communities to help them stay warm and safe."
+  },
+  {
+    "date": "2026-05-12",
+    "caption": "Posting after a long time, but the work never really stops. We recently organized an event in Aurangabad for a Zilla Parishad school, where we provided lezim for the kids to support their dance classes. It’s a small initiative, but moments like these matter. Big thank you to our volunteers for making it happen ❤️"
+  },
+  {
+    "date": "2026-08-03",
+    "caption": "This time in Aurangabad, we took a small step by distributing caps to students at a Zilla Parishad school—helping them stay protected while they learn and play. Sometimes, it’s the simplest gestures that create the biggest smiles. Grateful to our amazing volunteers for making this happen ❤️"
+  },
+  {
+    "date": "2026-08-19",
+    "caption": "It's been a while since we last got to do this — and it feels so good to be back. Last week, Navriseup India Care Foundation distributed books 📚 to 12th class students in Aurangabad, right when they need them most, heading into one of the most important years of their academic life. None of this happens without the people who show up for us, again and again. To everyone who supported this drive — thank you. Truly. You made this possible. Here's to more of these days ahead. 🙏"
+  },
+  {
+    "date": "2026-09-10",
+    "caption": "Grateful to share that with the dedication of our volunteers, Navriseup India Care Foundation recently donated school bags and books to students at Zilla Parishad School, Aurangabad. Access to basic learning resources can make a real difference in a child's education journey, and moments like these are a reminder of what's possible when people come together for a cause. Thank you to every volunteer who contributed their time and effort to make this drive successful — your commitment continues to drive our mission forward."
+  },
+  {
+    "date": "2026-09-22",
+    "caption": "A little late, but gratitude doesn't come with a deadline. 🙏 This Teachers' Day, we at Navriseup India Care Foundation took a moment to celebrate the educators who quietly shape futures — often with little recognition and even less resources. To every teacher who's ever believed in a child others gave up on, who's shown up despite the odds, and who's turned a classroom into a place of hope — thank you. Your impact outlasts the lesson plans and the school bell. Better late than never, but never too late to say it — Happy Teachers' Day. 🍎"
+  }
+]
