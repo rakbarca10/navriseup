@@ -107,6 +107,38 @@
     margin-bottom: 20px; /* Adds space after author's name */
 }
 
+/* Featured Hero Image at top of single blog */
+.blog-featured-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 25px auto 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.blog-featured-image img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.blog-featured-image.contain-fit {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.blog-featured-image.contain-fit img {
+    max-height: 320px;
+    width: auto;
+    object-fit: contain;
+}
+
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 1024px) {
