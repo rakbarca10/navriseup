@@ -1,89 +1,39 @@
+/* ====================================================
+   CONTACT PAGE (SMILE FOUNDATION REFERENCE STYLE)
+   ==================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
 }
 
-/* CONTACT */
-.contact-sect{
-    height: 60vh;
-    background: url("/images/img4.jpeg");
+.contact-sect {
+    height: 46vh;
+    min-height: 280px;
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url("../../images/img4.jpeg");
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 2.3rem;
-}
-/* scroll to top button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensure the button is above other elements */
-    overflow: hidden; /* Prevent overflow from causing extra space */
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
 }
 
-.scroll-btn {
-    background-color: #007bff; /* Blue background */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%; /* Makes the button circular */
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
+.contact-sect h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
 }
 
-.scroll-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-.scroll-btn i {
-    font-size: 16px;
-}
-
-/* Responsive Scroll Button for smaller screens */
-@media (max-width: 400px) {
-    .scroll-to-top {
-        bottom: 15px;
-        left: 15px;
+@media (max-width: 768px) {
+    .contact-sect h1 {
+        font-size: 2rem;
     }
-
-    .scroll-btn {
-        padding: 12px;
-        font-size: 18px;
-    }
-
-    .scroll-btn i {
-        font-size: 14px;
-    }
-}
-
-/* Whatsapp widget responsiveness */
-.elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    z-index: 999;
-    max-width: 100%; /* Ensure widget doesn't exceed screen width */
-    overflow: hidden; /* Prevent any overflow */
-}
-
-/* Responsive adjustment for WhatsApp widget */
-@media (max-width: 400px) {
-    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-        bottom: 50px;
-        right: 15px;
-        max-width: 95%; /* Adjust for smaller screens */
-    }
-}
-
-/* Prevent horizontal overflow caused by any elements */
-body {
-    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
 }

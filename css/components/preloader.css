@@ -1,5 +1,5 @@
 /* ====================================================
-   PRELOADER WITH LOGO
+   PRELOADER WITH LOGO (SMILE GREEN THEME)
    ==================================================== */
 .preloader {
     position: fixed;
@@ -50,9 +50,9 @@
     right: -6px;
     bottom: -6px;
     border-radius: 50%;
-    border: 3px solid rgba(0, 123, 255, 0.12);
-    border-top: 3px solid #007bff;
-    border-right: 3px solid #ffaa00;
+    border: 3px solid rgba(140, 198, 63, 0.18);
+    border-top: 3px solid #8cc63f;
+    border-right: 3px solid #f5b82e;
     animation: preloaderSpin 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
 
@@ -66,11 +66,12 @@
 }
 
 .preloader-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.15rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #1e293b;
-    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    letter-spacing: 1px;
     margin-bottom: 14px;
     animation: preloaderFade 1.5s ease-in-out infinite alternate;
 }
@@ -78,7 +79,7 @@
 .preloader-bar {
     width: 140px;
     height: 4px;
-    background: #e2e8f0;
+    background: #e8ecef;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -87,7 +88,7 @@
 .preloader-progress {
     width: 40%;
     height: 100%;
-    background: linear-gradient(90deg, #007bff, #00b4d8);
+    background: linear-gradient(90deg, #8cc63f, #5db530);
     border-radius: 10px;
     position: absolute;
     animation: preloaderBar 1.4s ease-in-out infinite;

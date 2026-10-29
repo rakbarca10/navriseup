@@ -1,119 +1,110 @@
+/* ====================================================
+   OUR IMPACT / ACHIEVEMENTS IN NUMBERS (REFERENCE STYLE)
+   ==================================================== */
 .achievement-section {
-    padding: 30px 15px;
-    background-color: #161616;
-    color: white;
+    padding: 70px 24px 75px;
+    background-color: #f2f2f2;
+    color: #1a1a1a;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-bottom: 2px solid black;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .achievement-heading {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 2.3rem;
-    margin-bottom: 25px;
-    color: rgb(241, 241, 241);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 42px 0;
+    color: #1a1a1a;
 }
 
 .achievement-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
 .achievement {
-    flex: 1 1 200px;
-    max-width: 220px;
-    padding: 8px;
+    padding: 10px 14px;
     box-sizing: border-box;
-    font-size: 1.4rem;
-    color: rgb(255, 221, 0);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .count {
-    display: block;
-    font-size: 2.4rem;
-    font-weight: bold;
-    color: rgb(255, 221, 0);
-    border-bottom: 1px solid white;
-    padding-bottom: 4px;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #8cc63f;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.count::after {
+    content: "+";
+    color: #8cc63f;
+    margin-left: 2px;
 }
 
 .label {
     margin-top: 4px;
     display: block;
-    font-size: 1rem;
-    color: #a1a1a1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: #555555;
+    max-width: 190px;
 }
 
 /* Tablet */
-@media (max-width: 768px) {
-    .achievement-section {
-        padding: 25px 12px;
-    }
-
-    .achievement-heading {
-        font-size: 1.8rem;
-        margin-bottom: 18px;
-    }
-
+@media (max-width: 900px) {
     .achievement-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .achievement {
-        max-width: 100%;
-        font-size: 1.2rem;
-        padding: 6px 0;
-        max-height: 100px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
     }
 
     .count {
-        font-size: 2rem;
-    }
-
-    .label {
-        font-size: 0.9rem;
+        font-size: 3.4rem;
     }
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
     .achievement-section {
-        padding: 20px 10px;
+        padding: 50px 16px;
     }
 
     .achievement-heading {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+        font-size: 1.75rem;
+        margin-bottom: 28px;
     }
 
     .achievement-container {
-        gap: 10px;
-    }
-
-    .achievement {
-        font-size: 1.1rem;
-        margin: 0;
-        padding: 4px 0;
-        height: max-content;
-        max-height: 100px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 12px;
     }
 
     .count {
-        font-size: 1.7rem;
+        font-size: 2.75rem;
     }
 
     .label {
-        font-size: 0.85rem;
+        font-size: 0.84rem;
     }
 }

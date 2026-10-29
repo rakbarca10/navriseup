@@ -1,118 +1,176 @@
-/* Ongoing Causes Section */
+/* ====================================================
+   ONGOING CAUSES / SUPPORT A CAUSE (SMILE REFERENCE STYLE)
+   ==================================================== */
 .ongoing-causes {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+    padding: 65px 24px 70px;
+    background-color: #ffffff;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0;
+    border-top: 1px solid #f0f0f0;
 }
 
-.heading {
-    font-family: 'Inter', sans-serif;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 40px;
+.ongoing-causes .heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    margin: 0 0 42px 0;
 }
 
-/* Grid Layout for Cards */
+/* Grid Layout for Cause Cards */
 .oc-allcards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1120px;
+    margin: 0 auto;
     height: fit-content;
 }
 
-/* Card Styles */
+/* Tall Photo Card with Overlaid White Title on Image + Clean Details Below */
 .oc-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    position: relative; /* For positioning the donate button */
-    max-height: 400px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+    overflow: visible;
+    position: relative;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .oc-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: none;
+}
+
+/* Dark bottom gradient over the 320px image so white title pops */
+.oc-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 320px;
+    border-radius: 14px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.02) 35%,
+        rgba(0, 0, 0, 0.82) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
 }
 
 .oc-img {
     width: 100%;
-    height: 45%;
+    height: 320px;
     object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
+    border-radius: 14px;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Content inside cards */
+/* Content Container */
 .oc-content {
-    padding: 20px;
-    position: relative;
-    z-index: 1; /* Keep the content on top of the dimmed background */
-    transition: opacity 0.3s ease-in-out;
+    padding: 18px 4px 10px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
+/* Overlaid Uppercase White Title on bottom of Image (like TAYYARI KAL KI / SHIKSHA NA RUKE) */
 .oc-heading {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 320px;
+    display: flex;
+    align-items: flex-end;
+    padding: 22px 20px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0;
+    z-index: 2;
+    pointer-events: none;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
 }
 
 .oc-details {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    flex-grow: 1;
 }
 
-/* Hide Raised Money Text on Hover */
 .oc-num {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-    transition: opacity 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #6da324;
+    margin-bottom: 14px;
+    opacity: 1 !important;
 }
 
 .oc-card:hover .oc-num {
-    opacity: 0; /* Hide the raised money text on hover */
+    opacity: 1;
 }
 
-/* Donation Button hidden initially */
+/* Razorpay Donate Form Always Visible Below Card */
 .donate-form {
-    position: absolute;
-    bottom: 50%;
-    left: 5%;
-    width: 90%;
-    opacity: 0;
-    z-index: 2; /* Appear on top of the content */
-    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+    position: static;
+    width: 100%;
+    opacity: 1;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: auto;
 }
 
 .oc-card:hover .donate-form {
-    opacity: 1; /* Show button on hover */
-    bottom: 20px; /* Slide the button up */
+    opacity: 1;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .ongoing-causes{
-        margin-top: 0;
+/* Responsive */
+@media (max-width: 960px) {
+    .oc-allcards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
-    .heading {
-        font-size: 2rem;
+}
+
+@media (max-width: 640px) {
+    .ongoing-causes {
+        padding: 45px 18px;
+    }
+
+    .ongoing-causes .heading {
+        font-size: 1.8rem;
+        margin-bottom: 28px;
     }
 
     .oc-allcards {
-        grid-template-columns: 1fr; /* One column for smaller screens */
+        grid-template-columns: 1fr;
+        max-width: 420px;
     }
 
-    .oc-content {
-        padding: 15px;
+    .oc-img,
+    .oc-card::before,
+    .oc-heading {
+        height: 280px;
     }
 }
-@media (max-width: 1300px) {
-    .oc-card {
-        max-height: 500px; /* Increase height to fit the button */
-    }
-}
-

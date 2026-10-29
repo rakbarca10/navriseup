@@ -1,60 +1,87 @@
+/* ====================================================
+   EVENT REPORT / CASE STUDY PAGE (SMILE REFERENCE STYLE)
+   ==================================================== */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fafafa;
+    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-    color: #444;
+    color: #444444;
 }
 
 .event-container {
-    max-width: 1200px;
-    margin: 2rem auto;
+    max-width: 1140px;
+    margin: 2.5rem auto;
     background-color: #ffffff;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.068);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
 }
 
 .event-heading h1 {
     text-align: center;
-    font-size: 2.3rem;
-    color: #00796b;
-    margin-bottom: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #1a1a1a;
+    margin-bottom: 1.8rem;
+    border-bottom: 3px solid #8cc63f;
+    padding-bottom: 12px;
 }
 
 .event-report {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.8rem;
     line-height: 1.8;
 }
 
-.event-details, .impact-section, .future-considerations, .conclusion-section {
-    background-color: #f5f5f5;
+.event-details,
+.impact-section,
+.future-considerations,
+.conclusion-section {
+    background-color: #f7f7f7;
+    border: 1px solid #ebebeb;
+    border-top: 4px solid #8cc63f;
     padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.event-title, .section-title {
-    font-size: 1.5rem;
-    color: #004d40;
+.event-title,
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1a1a1a;
+    margin-top: 0;
     margin-bottom: 1rem;
 }
 
-.details-list, .impact-list, .considerations-list {
+.details-list,
+.impact-list,
+.considerations-list {
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
-.details-list li, .ration-list li, .impact-list li, .considerations-list li {
+.details-list li,
+.ration-list li,
+.impact-list li,
+.considerations-list li {
     margin-bottom: 0.75rem;
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     line-height: 1.7;
 }
 
-.impact-text, .conclusion-text {
+.impact-text,
+.conclusion-text {
     margin-bottom: 1rem;
     line-height: 1.8;
 }
@@ -67,12 +94,11 @@ body {
 .report-img img {
     max-width: 100%;
     height: auto;
-    max-height: 85vh;
+    max-height: 80vh;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive design */
 @media (max-width: 1024px) {
     .event-report {
         grid-template-columns: 1fr;
@@ -82,27 +108,10 @@ body {
 @media (max-width: 768px) {
     .event-container {
         padding: 1.5rem;
+        margin: 1.2rem 12px;
     }
 
     .event-heading h1 {
         font-size: 1.75rem;
-    }
-
-    .event-title, .section-title {
-        font-size: 1.25rem;
-    }
-
-    .details-list li, .ration-list li, .impact-list li, .considerations-list li {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .event-container {
-        padding: 1rem;
-    }
-
-    .event-heading h1 {
-        font-size: 1.5rem;
     }
 }

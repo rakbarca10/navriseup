@@ -1,42 +1,58 @@
+/* ====================================================
+   VOLUNTEER PAGE (SMILE FOUNDATION REFERENCE STYLE)
+   ==================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
 }
-/* Why volunteer section */
+
 .why-volunteer-section {
-    padding: 50px 20px;
+    padding: 60px 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5; /* Subtle background similar to other sections */
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .why-volunteer-section .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1140px;
     width: 100%;
-    gap: 30px;
-    margin-bottom: 100px;
+    gap: 44px;
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    flex-direction: row;
 }
 
 .why-volunteer-left {
     flex: 1;
-    color: #2c3e50; /* Consistent font color */
-    font-size: 1.2rem;
+    color: #333333;
+    font-size: 1rem;
+    text-align: left;
 }
 
+.why-volunteer-left h1,
 .why-volunteer-left h2 {
-    color: #0060ff; /* Using the same blue for headings */
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: #1a1a1a;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0 0 18px 0;
 }
 
 .why-volunteer-left p {
-    margin-bottom: 15px;
-    line-height: 1.6;
+    margin-bottom: 14px;
+    line-height: 1.75;
+    color: #4a4a4a;
 }
 
 .why-volunteer-right {
@@ -45,199 +61,103 @@ html, body {
 }
 
 .why-volunteer-right img {
-    max-width: 100%;
-    max-height: 550px; 
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
+.heading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 2.2rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+/* Thank You Volunteers Section */
+.thank-you-volunteers {
+    padding: 65px 24px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thank-you-volunteers .heading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 42px;
+    color: #1a1a1a;
+}
+
+.volunteers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 26px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.team-member {
+    width: 240px;
+    background-color: #f5f5f5;
+    border: 1px solid #ebebeb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    padding: 24px 18px;
+    box-sizing: border-box;
+}
+
+.team-member:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.team-image {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tname {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.post {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #6da324;
+}
+
 @media (max-width: 768px) {
     .why-volunteer-section .container {
         flex-direction: column;
         text-align: center;
     }
+
     .why-volunteer-left {
-        margin-bottom: 30px;
+        text-align: center;
     }
-    .why-volunteer-right img {
-        max-width: 80%;
-    }
-}
-.heading{
-    font-weight: bold;
-    color: #2c3e50; /* Dark navy for clarity */
-    font-size: 2.5rem; /* Larger heading */
-    line-height: 2.7rem;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-    animation: fadeIn 1s ease-in-out;
-}
-/* Thank You Volunteers Section */
-.thank-you-volunteers {
-    padding: 60px 0;
-    background-color: #ffffff; /* Keep background consistent with about page */
-    text-align: center;
-    margin-top: 100px;
-}
-
-.thank-you-volunteers .heading {
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: #333333;
-}
-
-/* Volunteers container */
-.volunteers-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-/* Team member card */
-.team-member {
-    width: 250px;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
-}
-
-/* Volunteer image */
-.team-image {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Team member name */
-.tname {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #005eff;
-    margin-bottom: 10px;
-}
-
-/* Team member post/role */
-.post {
-    font-size: 1rem;
-    color: #777777;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .volunteers-container {
-        gap: 20px;
-    }
-    .team-member {
-        width: 220px;
-    }
-}
-
-@media (max-width: 768px) {
-    .volunteers-container {
-        /* flex-direction: column; */
-        align-items: center;
-        margin: 0 20px;
-    }
-    .team-member {
-        /* width: 90%; */
-        flex: 1 1 22%;
-    }
-}
-
-/* scroll to top button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensure the button is above other elements */
-    overflow: hidden; /* Prevent overflow from causing extra space */
-}
-
-.scroll-btn {
-    background-color: #007bff; /* Blue background */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%; /* Makes the button circular */
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.scroll-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-.scroll-btn i {
-    font-size: 16px;
-}
-
-/* Responsive Scroll Button for smaller screens */
-@media (max-width: 400px) {
-    .volunteers-container {
-        /* flex-direction: column; */
-        align-items: center;
-        margin: 0 15px;
-    }
-
-    .team-member {
-        /* width: 90%; */
-        flex: 1 1 40%;
-    }
-
-    .scroll-to-top {
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .scroll-btn {
-        padding: 12px;
-        font-size: 18px;
-    }
-
-    .scroll-btn i {
-        font-size: 14px;
-    }
-}
-
-/* Whatsapp widget responsiveness */
-.elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    z-index: 999;
-    max-width: 100%; /* Ensure widget doesn't exceed screen width */
-    overflow: hidden; /* Prevent any overflow */
-}
-
-/* Responsive adjustment for WhatsApp widget */
-@media (max-width: 400px) {
-    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-        bottom: 50px;
-        right: 15px;
-        max-width: 95%; /* Adjust for smaller screens */
-    }
-}
-
-/* Prevent horizontal overflow caused by any elements */
-body {
-    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
 }

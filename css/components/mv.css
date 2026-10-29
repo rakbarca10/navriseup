@@ -1,92 +1,133 @@
+/* ====================================================
+   ABOUT US / MISSION & VISION (EDITORIAL INTRO STYLE)
+   ==================================================== */
 .missions-visions {
-    padding: 40px 20px;
+    padding: 70px 24px 65px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    box-sizing: border-box;
 }
 
 .heading {
-    margin-top: 20px;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    font-size: 3rem; 
-    margin-bottom: 30px; 
-    color: #262626; 
+    margin-top: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    color: #1a1a1a;
     text-align: center;
     width: 100%;
 }
 
+.missions-visions .heading.aboutus {
+    margin-top: 0;
+    margin-bottom: 28px;
+    position: relative;
+}
+
 .outer-mv {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 .mv-card {
-    margin: 15px;
-    /* height: 320px;  */
-    border: 2px solid #b8b8b8;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.108);  */
+    margin: 0;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
     overflow: hidden;
     display: flex;
+    align-items: center;
+    gap: 36px;
+    padding: 10px 0;
 }
 
 .vision {
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
 }
 
 .mv-img {
-    width: 40%;
-    height: 100%; 
-    object-fit: cover; 
+    width: 34%;
+    min-width: 260px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
 }
+
 .mv-content {
-    padding: 20px;
-    flex: 1; /* Take up remaining space */
+    padding: 8px 0;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; Vertically center the content */
+    text-align: left;
 }
 
 .mv-subheading {
-    font-size: 1.5rem; 
-    color: #494949; 
-    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #8cc63f;
+    margin: 0 0 10px 0;
 }
 
 .mv-details {
-    font-size: 1.05rem;
-    color: #363636; 
-    line-height: 1.6; /* Improved readability */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.98rem;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Subtle "read more >" style accent at bottom of section matching reference */
+.missions-visions::after {
+    content: "read more  \203A";
+    display: inline-block;
+    margin-top: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #8cc63f;
+    letter-spacing: 0.4px;
 }
 
 @media (max-width: 768px) {
-    .mv-card {
-        flex-direction: column;
-        width: 100%; /* Full width for smaller screens */
-        height: auto; /* Reset height for smaller screens */
-        margin: 0;
+    .missions-visions {
+        padding: 45px 18px;
     }
 
-    .mission{
-        margin-bottom: 30px;
+    .mv-card,
+    .vision {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 18px;
+        text-align: center;
     }
 
     .mv-img {
         width: 100%;
-        height: auto; /* Maintain aspect ratio */
+        max-width: 420px;
+        height: 220px;
     }
 
     .mv-content {
-        padding: 15px; 
+        text-align: center;
+        padding: 0;
     }
 
     .heading {
-        font-size: 2rem; /* Responsive font size */
-    }
-    .outer-mv {
-        grid-template-columns: 1fr;
+        font-size: 1.8rem;
     }
 }

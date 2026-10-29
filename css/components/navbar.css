@@ -1,390 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --smile-green: #8cc63f;
+    --smile-green-dark: #72a82b;
+    --smile-green-light: #f2f9e9;
+    --smile-charcoal: #4a4c4e;
+    --smile-dark: #1a1a1a;
+    --smile-text: #4a4a4a;
+    --smile-grey-bg: #f2f2f2;
+    --smile-sage-bg: #b8d0d0;
+    --smile-peach-bg: #dfbfb0;
+    --pillar-yellow: #e0a63a;
+    --pillar-purple: #8e78b5;
+    --pillar-teal: #57aab4;
+    --pillar-coral: #cf7d67;
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior:smooth;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-
-/* Lower Navbar Styling */
+/* ====================================================
+   HEADER / NAVBAR (SMILE FOUNDATION REFERENCE STYLE)
+   ==================================================== */
 .main-navbar {
     position: sticky;
-    background-color: #242424; 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
-    padding: 10px 15px; 
     top: 0;
     margin: 0;
     z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    padding: 10px 24px;
+}
+
+.container-nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .navbar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
+
 .logo {
     display: flex;
     align-items: center;
-    color: #ffdd00; 
-    font-weight: bold;
-    font-size: 24px; 
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
 }
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
 .logo img {
-    height: 55px; 
-    margin-right: 8px;
+    height: 54px;
+    width: auto;
+    margin-right: 10px;
+    object-fit: contain;
 }
+
+.logo .name {
+    color: #1a1a1a;
+    line-height: 1.1;
+}
+
 .hamburger {
     display: none;
     background: none;
     border: none;
-    font-size: 28px;
-    color: white;
+    font-size: 24px;
+    color: #1a1a1a;
     cursor: pointer;
     z-index: 1001;
+    padding: 6px;
 }
 
+/* Navigation Links */
 .site-navigation ul {
     list-style: none;
     display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
+    gap: 6px;
 }
-.site-navigation ul li {  
-    margin-left: 30px; 
-    padding: 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+
+.site-navigation ul li {
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    position: relative;
 }
+
 .site-navigation ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 18px; 
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #222222;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    transition: color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
 }
+
 .site-navigation ul li:hover {
-    background-color: #333333; 
+    background-color: transparent;
 }
 
 .site-navigation ul li a:hover {
-    color: #ffdd00; 
-    transform: scale(1.1);
+    color: var(--smile-green);
 }
 
-/* Donate Button Styling */
+.site-navigation ul li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: var(--smile-green);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+.site-navigation ul li:hover > a::after {
+    transform: scaleX(1);
+}
+
+/* Donate CTA Button (Smile Green Pill/Button) */
 .donate-btn {
-    background-color: #4880da; 
-    color: white;
-    padding: 14px 32px; 
-    border-radius: 8px;
+    background-color: var(--smile-green);
+    color: #ffffff !important;
+    padding: 10px 28px;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 8px rgba(140, 198, 63, 0.3);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 .donate-btn:hover {
-    background-color: #578bdf; /* Lighter blue hover */
-    transform: scale(1.05); /* Subtle hover effect */
+    background-color: var(--smile-green-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(140, 198, 63, 0.4);
 }
 
-
-/* dropdown */
-/* Dropdown menu styling */
+/* Dropdown Menu */
 .site-navigation ul li.dropdown {
     position: relative;
 }
 
+.dropdown-toggle i {
+    margin-left: 5px;
+    font-size: 11px;
+    color: #555555;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.site-navigation ul li.dropdown:hover .dropdown-toggle i {
+    color: var(--smile-green);
+    transform: rotate(180deg);
+}
+
 .site-navigation ul li .dropdown-content {
     margin: 0;
-    padding: 0;
-    display: none; /* Hidden by default */
+    padding: 8px 0;
+    display: none;
     position: absolute;
-    background-color: #242424;
-    top: 100%; /* Aligns the dropdown below the parent li */
+    background-color: #ffffff;
+    top: 100%;
     left: 0;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    min-width: 190px;
+    border-top: 3px solid var(--smile-green);
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 .site-navigation ul li .dropdown-content li {
     list-style: none;
-    margin: 0; /* No margin for dropdown items */
-    padding: 8px 12px;
+    margin: 0;
+    padding: 0;
     border-radius: 0;
 }
 
 .site-navigation ul li .dropdown-content li a {
-    font-size: 16px; /* Slightly smaller font */
-    padding: 10px;
-    color: white; 
-    /* background-color: #333333; */
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 18px;
+    color: #333333;
     display: block;
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.site-navigation ul li .dropdown-content li a::after {
+    display: none;
 }
 
 .site-navigation ul li .dropdown-content li a:hover {
-    /* background-color: #444444; Change background on hover */
-    color: #ffdd00;
+    background-color: var(--smile-green-light);
+    color: var(--smile-green-dark);
+    padding-left: 22px;
 }
 
 .site-navigation ul li:hover .dropdown-content {
-    display: block; /* Show the dropdown when hovering over parent */
+    display: block;
 }
 
 .show {
     display: block !important;
 }
-/* Navbar links and dropdown without transitions */
-.site-navigation ul li a,
-.site-navigation ul li:hover,
-.donate-btn,
-.donate-btn:hover,
-.site-navigation ul li .dropdown-content li a,
-.site-navigation ul li .dropdown-content {
-    transition: none; /* Removes transitions */
-    transform: none; /* Removes transform on hover */
-}
 
-/* Keep other hover styles intact */
-.site-navigation ul li:hover {
-    background-color: #333333; /* No transition */
-}
-
-.donate-btn:hover {
-    background-color: #4880da; /* Keep hover effect without animation */
-}
-.dropdown-toggle i {
-    margin-left: 5px; /* Add some space between text and arrow */
-    font-size: 12px; /* Adjust the size of the arrow */
-}
-
+/* ====================================================
+   RESPONSIVE NAVBAR
+   ==================================================== */
 @media (max-width: 1024px) {
+    .main-navbar {
+        padding: 10px 16px;
+    }
+
     #hamburger-btn {
         display: block;
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 18px;
+        right: 18px;
     }
 
-    .donate-btn {
+    .navbar-content > .donate-btn {
         display: none;
     }
 
-    .name{
-        font-size: large;
-    }
-    
     .logo {
         justify-content: flex-start;
-        margin-left: 10px;
-    }
-
-    .site-navigation {
-        display: none; /* Hidden by default on mobile */
-        flex-direction: column;
-        width: 100%;
-        background-color: 242424; 
-        color: white;
-    }
-
-    .site-navigation.active {
-        display: flex; /* Show when hamburger is clicked */
-    }
-
-    .site-navigation ul li .dropdown-content {
-        position: relative; 
-        width: 100%; 
-        left: 0; 
-        top: 0; 
-    }
-
-    .site-navigation ul li .dropdown-content li a {
-        padding: 10px 20px;
-        font-size: 16px; 
-    }
-    
-    .site-navigation ul li {
-        margin: 5px 0; 
-    }
-
-    .navbar-content {
-        flex-direction: column;
-        text-align: center;
-        align-items:flex-start;
-    }
-
-    .site-navigation ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .site-navigation ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Responsive Design for Navbar */
-@media (max-width: 1111px) and (min-width: 1028px) {
-    .navbar-content {
-        justify-content: space-around; 
-    }
-
-    .donate-btn {
-        padding: 10px 22px; 
-        font-size: 18px; 
-        box-sizing: border-box; 
-    }
-
-    .site-navigation ul li {
-        margin-left: 20px; 
-    }
-}
-
-@media (max-width: 768px) {
-
-    .logo{
-        justify-content: center;
-    }
-
-    .top-bar-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-info {
-        margin-bottom: 10px;
-    }
-
-    .social-media-icons a {
-        margin: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar-content {
-        flex-direction: column;
+        font-size: 19px;
     }
 
     .logo img {
-        height: 50px;
-    }
-
-    .donate-btn {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-}
-@media (max-width: 381px) {
-    .top-bar-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        text-align: center;
-        font-size: 12px; /* Smaller text for narrow width */
-    }
-
-    .social-media-icons {
-        margin-top: 10px;
+        height: 46px;
     }
 
     .navbar-content {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+    }
+
+    .site-navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        border-top: 1px solid #eeeeee;
+        margin-top: 10px;
+        padding-top: 8px;
+    }
+
+    .site-navigation.active {
+        display: flex;
     }
 
     .site-navigation ul {
         flex-direction: column;
-        margin-top: 10px;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0;
     }
 
     .site-navigation ul li {
-        margin: 5px 0;
+        width: 100%;
+        padding: 10px 8px;
+        border-bottom: 1px solid #f5f5f5;
+        box-sizing: border-box;
     }
 
-    .site-navigation ul li a {
-        font-size: 14px; /* Smaller font size */
+    .site-navigation ul li > a::after {
+        display: none;
     }
 
-    .donate-btn {
-        font-size: 14px; /* Smaller font for mobile */
-        padding: 8px 20px; /* Adjust padding */
+    .site-navigation ul li .dropdown-content {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid var(--smile-green);
+        margin-top: 6px;
+        padding: 4px 0;
+        background-color: #fafafa;
+    }
+
+    .site-navigation ul li .dropdown-content li {
+        border-bottom: none;
+    }
+
+    .site-navigation ul li .dropdown-content li a {
+        padding: 8px 16px;
+        font-size: 13px;
     }
 }
-/* scroll to top button */
+
+/* ====================================================
+   SCROLL TO TOP & FLOATING WIDGETS
+   ==================================================== */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    z-index: 1000; /* Ensure the button is above other elements */
-    overflow: hidden; /* Prevent overflow from causing extra space */
+    z-index: 1000;
+    overflow: hidden;
 }
 
 .scroll-btn {
-    background-color: #007bff; /* Blue background */
-    color: white;
+    background-color: var(--smile-green);
+    color: #ffffff;
     border: none;
-    padding: 15px;
-    border-radius: 50%; /* Makes the button circular */
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
     transition: all 0.3s ease;
 }
 
 .scroll-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: var(--smile-green-dark);
+    transform: translateY(-2px);
 }
 
 .scroll-btn i {
-    font-size: 16px;
+    font-size: 15px;
 }
 
-/* Responsive Scroll Button for smaller screens */
-@media (max-width: 400px) {
-    .scroll-to-top {
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .scroll-btn {
-        padding: 12px;
-        font-size: 18px;
-    }
-
-    .scroll-btn i {
-        font-size: 14px;
-    }
-}
-
-/* Whatsapp widget responsiveness */
 .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
     position: fixed;
     bottom: 60px;
     right: 20px;
     z-index: 999;
-    max-width: 100%; /* Ensure widget doesn't exceed screen width */
-    overflow: hidden; /* Prevent any overflow */
-}
-
-/* Responsive adjustment for WhatsApp widget */
-@media (max-width: 400px) {
-    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-        bottom: 50px;
-        right: 15px;
-        max-width: 95%; /* Adjust for smaller screens */
-    }
-}
-
-/* Prevent horizontal overflow caused by any elements */
-body {
-    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
+    max-width: 100%;
+    overflow: hidden;
 }
 
 /* ====================================================
@@ -439,9 +428,9 @@ body {
     right: -6px;
     bottom: -6px;
     border-radius: 50%;
-    border: 3px solid rgba(0, 123, 255, 0.12);
-    border-top: 3px solid #007bff;
-    border-right: 3px solid #ffaa00;
+    border: 3px solid rgba(140, 198, 63, 0.18);
+    border-top: 3px solid var(--smile-green);
+    border-right: 3px solid #f5b82e;
     animation: preloaderSpin 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
 
@@ -455,11 +444,12 @@ body {
 }
 
 .preloader-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.15rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #1e293b;
-    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    letter-spacing: 1px;
     margin-bottom: 14px;
     animation: preloaderFade 1.5s ease-in-out infinite alternate;
 }
@@ -467,7 +457,7 @@ body {
 .preloader-bar {
     width: 140px;
     height: 4px;
-    background: #e2e8f0;
+    background: #e8ecef;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -476,7 +466,7 @@ body {
 .preloader-progress {
     width: 40%;
     height: 100%;
-    background: linear-gradient(90deg, #007bff, #00b4d8);
+    background: linear-gradient(90deg, var(--smile-green), #5db530);
     border-radius: 10px;
     position: absolute;
     animation: preloaderBar 1.4s ease-in-out infinite;
@@ -502,4 +492,3 @@ body {
     50% { width: 70%; }
     100% { left: 100%; width: 40%; }
 }
-

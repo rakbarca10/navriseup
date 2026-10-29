@@ -1,111 +1,68 @@
+/* ====================================================
+   LEGAL INFORMATION PAGE (SMILE FOUNDATION REFERENCE STYLE)
+   ==================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
 }
-/* LEGAL INFORMATION */
-.legalinfo-sect {
-    background-color: #fcfcfc;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    font-family: 'Arial', sans-serif;
-  }
 
-  .legalinfo-content {
-    text-align: center;
-    width: 80vw;
-    margin: auto;
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-  }
-  .legalinfo-content p {
-    margin: 10px 0;
-  }
-  
-  .legalinfo-content strong {
-    font-weight: bold;
-    color: #333;
-  }
-  .heading{
-    font-weight: bold;
-    color: #2c3e50; /* Dark navy for clarity */
-    font-size: 2.5rem; /* Larger heading */
-    line-height: 2.7rem;
+.legalinfo-sect {
+    background-color: #f2f2f2;
+    padding: 65px 24px;
+    margin: 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.heading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 2.2rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 0 0 28px 0;
 }
 
-/* scroll to top button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensure the button is above other elements */
-    overflow: hidden; /* Prevent overflow from causing extra space */
+.legalinfo-content {
+    text-align: center;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.8;
+    background: #ffffff;
+    padding: 36px 32px;
+    border-radius: 12px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
 }
 
-.scroll-btn {
-    background-color: #007bff; /* Blue background */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%; /* Makes the button circular */
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
+.legalinfo-content p {
+    margin: 12px 0;
 }
 
-.scroll-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+.legalinfo-content a {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 9px 24px;
+    background-color: #8cc63f;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
-.scroll-btn i {
-    font-size: 16px;
-}
-
-/* Responsive Scroll Button for smaller screens */
-@media (max-width: 400px) {
-    .scroll-to-top {
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .scroll-btn {
-        padding: 12px;
-        font-size: 18px;
-    }
-
-    .scroll-btn i {
-        font-size: 14px;
-    }
-}
-
-/* Whatsapp widget responsiveness */
-.elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    z-index: 999;
-    max-width: 100%; /* Ensure widget doesn't exceed screen width */
-    overflow: hidden; /* Prevent any overflow */
-}
-
-/* Responsive adjustment for WhatsApp widget */
-@media (max-width: 400px) {
-    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-        bottom: 50px;
-        right: 15px;
-        max-width: 95%; /* Adjust for smaller screens */
-    }
-}
-
-/* Prevent horizontal overflow caused by any elements */
-body {
-    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
+.legalinfo-content a:hover {
+    background-color: #72a82b;
 }

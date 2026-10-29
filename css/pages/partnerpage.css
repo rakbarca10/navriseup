@@ -1,207 +1,141 @@
+/* ====================================================
+   PARTNERS PAGE (SMILE FOUNDATION REFERENCE STYLE)
+   ==================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
 }
-/* Meet our partners */
-.partner-sect{
-    width: 90vw;
-    margin: auto;
-    padding: 20px;
+
+.partner-sect {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 60px 24px 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
 }
 
-/* Section Heading */
 .heading {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #3f3f3f;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 40px 0;
+    color: #1a1a1a;
 }
 
-/* Partner container grid */
-.partner-container{
+.partner-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 28px;
     width: 100%;
 }
 
-.partner-box{
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Empanelment & Accreditations Card Style from Reference */
+.partner-box {
+    background-color: #f5f5f5;
+    border: 1px solid #ebebeb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .partner-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.09);
 }
 
-.partner-logo{
+.partner-logo {
     width: 100%;
-    height: 200px;
+    height: 175px;
     object-fit: contain;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
 }
 
-.partner-details{
-    padding: 15px;
-    line-height: 1.6rem;
+.partner-details {
+    padding: 16px 6px 6px;
+    line-height: 1.5;
 }
 
-.partner-type{
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: white;
+.partner-type {
+    border-radius: 4px;
+    padding: 4px 12px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    display: inline-block;
+}
+
+#education {
+    background-color: #e0a63a;
+}
+
+#women {
+    background-color: #57aab4;
+}
+
+#volunteer_association {
+    background-color: #8cc63f;
+}
+
+#legal {
+    background-color: #8e78b5;
+}
+
+#csr {
+    background-color: #49b675;
+}
+
+#event {
+    background-color: #cf7d67;
+}
+
+.partner-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 12px 0 4px;
+    color: #1a1a1a;
+}
+
+.partner-location {
+    font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
-    display: inline-block;
-}
-#education{
-    background-color: #1E90FF;
-}
-#women{
-    background-color: #FF69B4;
-}
-#volunteer_association{
-    background-color: #FFA500;
-}
-#legal{
-    background-color: #808080;
-}
-#csr{
-    background-color: #008080;
-}
-#event{
-    background-color: #FF7F50;
-}
-.partner-name{
-    font-size: 1.5rem;
-    margin: 10px 0;
-    color: #333;
+    color: #666666;
+    margin: 0;
 }
 
-.partner-location{
-    font-size: 1rem;
-    color: #666;
+@media screen and (max-width: 900px) {
+    .partner-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.partner-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #e63946;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.partner-link:hover {
-    color: #3f3f3f;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-    .partner-container{
+@media screen and (max-width: 600px) {
+    .partner-container {
         grid-template-columns: 1fr;
-        gap: 15px;
     }
 
-    .partner-box {
-        margin-bottom: 20px;
+    .heading {
+        font-size: 1.8rem;
     }
-
-    .partner-sect h2 {
-        font-size: 2rem;
-    }
-
-    .partner-logo {
-        height: 150px;
-    }
-
-    .partner-details {
-        padding: 10px;
-    }
-
-    .partner-name {
-        font-size: 1.2rem;
-    }
-
-    .partner-location {
-        font-size: 0.9rem;
-    }
-}
-
-/* scroll to top button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensure the button is above other elements */
-    overflow: hidden; /* Prevent overflow from causing extra space */
-}
-
-.scroll-btn {
-    background-color: #007bff; /* Blue background */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%; /* Makes the button circular */
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.scroll-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-.scroll-btn i {
-    font-size: 16px;
-}
-
-/* Responsive Scroll Button for smaller screens */
-@media (max-width: 400px) {
-    .scroll-to-top {
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .scroll-btn {
-        padding: 12px;
-        font-size: 18px;
-    }
-
-    .scroll-btn i {
-        font-size: 14px;
-    }
-}
-
-/* Whatsapp widget responsiveness */
-.elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    z-index: 999;
-    max-width: 100%; /* Ensure widget doesn't exceed screen width */
-    overflow: hidden; /* Prevent any overflow */
-}
-
-/* Responsive adjustment for WhatsApp widget */
-@media (max-width: 400px) {
-    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-        bottom: 50px;
-        right: 15px;
-        max-width: 95%; /* Adjust for smaller screens */
-    }
-}
-
-/* Prevent horizontal overflow caused by any elements */
-body {
-    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
 }

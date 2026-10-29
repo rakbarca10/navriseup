@@ -1,104 +1,116 @@
+/* ====================================================
+   MEDIA COVERAGE PAGE (SMILE FOUNDATION REFERENCE STYLE)
+   ==================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
 }
-/* NEWS */
-.news{
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 80vw;
-    height: max-content;
+
+.news {
+    margin: 55px auto;
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 24px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
-.news .heading{
-    margin-bottom: 10px;
+
+.heading,
+.news .heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    margin: 0 0 36px 0;
+    text-align: center;
 }
-.subnews{
+
+.subnews {
     display: flex;
+    gap: 24px;
 }
-.rnews{
-    width: 70%;
-    padding: 10px;
-    gap: 10px;
+
+.rnews {
+    width: 68%;
+    gap: 24px;
     display: flex;
     flex-direction: row;
 }
-.rnews-item{
-    width: 47%;
-    height: 430px;
-    border-radius: 7px;
-    background-color: rgb(248, 248, 248);
+
+.rnews-item {
+    width: 50%;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ebebeb;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-.r-img {
-    max-width: 100%; 
-    max-height: 50%; 
-    overflow: hidden; 
-    border-radius: 7px;
-    margin-bottom: 15px;
-}
-.r-img img {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 7px;
-}
-.r-heading, .l-heading {
-    font-size: 1.3rem;
-    line-height: 1.4;
-}
-
-.r-details, .l-date {
-    line-height: 1.6;
-}
-.rnews-item, .lnews-item {
-    background-color: #f9f9f9; /* Softer background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-}
-.rnews-item:hover, .lnews-item:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.r-heading:hover, .l-heading:hover {
-    text-decoration: underline;
+.rnews-item:hover,
+.lnews-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
+
+.r-img {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+
+.r-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .r-heading {
+    font-family: 'Oswald', sans-serif;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    line-height: 1.35;
     color: #1a1a1a;
     text-decoration: none;
-    margin-bottom: 5px; 
-    padding: 15px;
+    padding: 18px 18px 8px;
+    transition: color 0.2s ease;
 }
-.r-heading:hover{
-    color: rgb(0, 85, 255);
-    transition-duration: 0.8s;
+
+.r-heading:hover,
+.l-heading:hover {
+    color: #6da324;
 }
+
 .r-details {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 5px; 
-    line-height: 1.5;
-    padding: 15px;
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.6;
+    padding: 0 18px 14px;
 }
+
 .r-channel {
     display: flex;
     align-items: center;
-    padding: 15px;
-    border-top: 1px solid #e0e0e0; /* Adds a subtle divider */
+    padding: 14px 18px;
+    border-top: 1px solid #e4e4e4;
 }
 
 .channel-img img {
-    width: 30px; /* Size of the channel logo */
-    height: 30px;
-    border-radius: 50%; /* Circular logo */
-    margin-right: 10px; /* Space between logo and text */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
 }
 
 .c-details {
@@ -107,420 +119,198 @@ html, body {
 }
 
 .cname {
-    font-weight: bold;
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 3px; /* Adds space between name and date */
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #222222;
 }
 
 .release-date {
-    font-size: 12px;
-    color: #888;
+    font-size: 0.76rem;
+    color: #777777;
 }
 
-.category {
-    font-size: 12px;
-    font-weight: bold;
-    color: #4a90e2; 
-    background-color: #f0f8ff; 
-    padding: 3px 6px;
+.category,
+.l-category {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6da324;
+    background-color: #f2f9e9;
+    border: 1px solid #cfe6b3;
+    padding: 3px 8px;
     border-radius: 4px;
-    margin-left: auto; 
+    margin-left: auto;
 }
 
 .lnews {
-    width: 30%;
-    padding: 10px;
+    width: 32%;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Adds space between each news item */
+    gap: 16px;
 }
 
 .lnews-item {
     display: flex;
-    gap: 10px;
-    height: 80px;
-    padding: 10px;
-    border-radius: 7px;
-    background-color: rgb(250, 250, 250);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for card effect */
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.lnews-item:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .l-img {
-    width: 30%;
+    width: 32%;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 6px;
 }
 
 .l-img img {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    border-radius: 5px;
+    object-fit: contain;
 }
 
 .l-content {
-    width: 65%;
+    width: 68%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
 }
 
 .l-heading {
-    font-size: 1rem;
-    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
     color: #1a1a1a;
     text-decoration: none;
-    margin-bottom: 5px;
-    transition: color 0.3s ease;
-}
-
-.l-heading:hover {
-    color: rgb(0, 85, 255); /* Color change on hover */
+    margin-bottom: 4px;
 }
 
 .l-date {
-    font-size: 0.85rem;
-    color: #888;
-}
-.l-category{
     font-size: 0.8rem;
-    font-weight: bold;
-    color: #4a90e2;          /* Text color */
-    background-color: #f0f8ff; /* Background color */
-    padding: 3px 6px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-top: 5px;  
-}
-/* media queries */
-@media (max-width: 768px) {
-    .news {
-        margin: auto;
-        margin-top: 50px;
-        width: 95vw;
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .heading{
-        margin-bottom: 50px;
-    }
-
-    .subnews {
-        flex-direction: column; /* Stack the columns on mobile */
-    }
-
-    .rnews {
-        margin: auto;
-        width: 85%;
-        flex-direction: column; /* Stack the right news items */
-    }
-
-    .rnews-item {
-        width: 100%;
-        height: auto; /* Allow the height to adjust automatically */
-        margin-bottom: 20px;
-    }
-
-    .r-img {
-        width: 100%;
-        height: auto; /* Auto height to prevent distortion */
-    }
-
-    .r-img img {
-        width: 100%;
-        height: auto; /* Maintain the aspect ratio */
-        object-fit: cover; /* Ensures the image covers the container without distortion */
-    }
-
-    .lnews {
-        width: 85%;
-        margin-top: 20px;
-        margin: auto;
-    }
-
-    .lnews-item {
-        flex-direction: row; /* Keep row layout */
-        height: auto;
-        gap: 10px;
-    }
-
-    .l-img {
-        width: 25%; /* Adjust image size */
-        height: auto; /* Auto height to keep aspect ratio */
-    }
-
-    .l-img img {
-        width: 100%;
-        height: auto; /* Maintain the aspect ratio */
-        object-fit: cover;
-    }
-
-    .l-content {
-        width: 70%; /* Adjust content width */
-    }
-
-    .l-heading, .r-heading {
-        font-size: 1.1rem; /* Slightly smaller font size */
-    }
-
-    .r-details, .l-date {
-        font-size: 0.9rem;
-    }
+    color: #777777;
 }
 
-@media (max-width: 480px) {
-    .rnews-item, .lnews-item {
-        flex-direction: column; /* Stack elements vertically on very small screens */
-    }
-
-    .r-img, .l-img {
-        width: 100%; /* Images take full width on small screens */
-        height: auto; /* Keep aspect ratio intact */
-    }
-
-    .r-img img, .l-img img {
-        width: 100%;
-        height: auto; /* Maintain the aspect ratio */
-        object-fit: cover;
-    }
-
-    .r-heading, .l-heading {
-        font-size: 1rem; /* Smaller headlines for small screens */
-    }
-
-    .r-details, .l-date {
-        font-size: 0.85rem; /* Smaller text details */
-    }
-
-    .r-channel, .l-category {
-        flex-direction: column;
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .l-category, .category {
-        font-size: 0.8rem; /* Smaller category tag */
-        margin-top: 5px;
-    }
+.l-category {
+    margin-left: 0;
+    margin-top: 6px;
 }
 
-/* In the Spotlight: Our Media Features */
+/* Newspaper Spotlight */
 .newspaper {
-    margin: 50px auto;
-    width: 80%;
+    margin: 60px auto 70px;
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 24px;
+    box-sizing: border-box;
     text-align: center;
-    margin-top: 100px;
 }
 
-.heading {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-/* Grid system for media items */
 .media-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Always 3 items per row on large screens */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
-/* Media item styling */
 .media-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    height: 300px; /* Fixed height for all images */
+    border-radius: 12px;
+    height: 290px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column; /* Ensures text stays at the bottom */
-    justify-content: flex-end;
 }
 
 .media-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
-/* Media image container */
 .media-img {
     position: relative;
     height: 100%;
     overflow: hidden;
 }
 
-/* Image style: consistent size without distortion */
 .media-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image does not distort */
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
 .media-item:hover img {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.04);
 }
 
-/* Overlay and link styling */
 .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30%;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    height: 32%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    color: #fff;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    color: #ffffff;
     opacity: 0;
     text-decoration: none;
-    font-size: 1rem;
     transition: opacity 0.3s ease;
-    border-radius: 10px;
 }
 
-/* Text and link styling */
 .overlay p {
-    padding: 5px;
+    padding: 6px 14px;
     margin: 0;
-    font-weight: 500;
-    font-size: 1.1rem;
-    background-color: rgba(255, 255, 255, 0.164);
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-/* Hover effect for only the text */
-.overlay:hover p {
-    color: rgb(110, 185, 255); /* Change text color on hover */
-}
-
-/* Only text changes color on hover, not the full overlay */
-.media-item:hover .overlay {
-    opacity: 1; /* Fade in overlay */
-}
-
-/* Media queries for mobile responsiveness */
-@media (max-width: 1024px) {
-    .media-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row for medium screens */
-    }
-
-    .media-item {
-        height: 250px; /* Adjust height for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .media-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
-    }
-
-    .media-item {
-        height: 200px; /* Reduce height on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .media-grid {
-        grid-template-columns: 1fr; /* 1 item per row on mobile */
-    }
-
-    .media-item {
-        height: 150px; /* Further reduce height for mobile */
-    }
-
-    .heading {
-        font-size: 1.5rem; /* Smaller font for headings on mobile */
-    }
-
-    .overlay p {
-        font-size: 0.9rem; /* Smaller text for links on mobile */
-    }
-}
-
-.associated, .heading {
-    font-size: 2.4rem;
+    font-family: 'Oswald', sans-serif;
     font-weight: 600;
-    color: #333;
-    margin-bottom: 30px;
-    text-align: center;
-}
-/* scroll to top button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensure the button is above other elements */
-    overflow: hidden; /* Prevent overflow from causing extra space */
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    background-color: #8cc63f;
+    color: #ffffff;
+    border-radius: 4px;
 }
 
-.scroll-btn {
-    background-color: #007bff; /* Blue background */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%; /* Makes the button circular */
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
+.media-item:hover .overlay {
+    opacity: 1;
 }
 
-.scroll-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-.scroll-btn i {
-    font-size: 16px;
-}
-
-/* Responsive Scroll Button for smaller screens */
-@media (max-width: 400px) {
-    .scroll-to-top {
-        bottom: 15px;
-        left: 15px;
+@media (max-width: 900px) {
+    .subnews {
+        flex-direction: column;
     }
 
-    .scroll-btn {
-        padding: 12px;
-        font-size: 18px;
+    .rnews,
+    .lnews {
+        width: 100%;
     }
 
-    .scroll-btn i {
-        font-size: 14px;
+    .media-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Whatsapp widget responsiveness */
-.elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    z-index: 999;
-    max-width: 100%; /* Ensure widget doesn't exceed screen width */
-    overflow: hidden; /* Prevent any overflow */
-}
-
-/* Responsive adjustment for WhatsApp widget */
-@media (max-width: 400px) {
-    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-        bottom: 50px;
-        right: 15px;
-        max-width: 95%; /* Adjust for smaller screens */
+@media (max-width: 600px) {
+    .rnews {
+        flex-direction: column;
     }
-}
 
-/* Prevent horizontal overflow caused by any elements */
-body {
-    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
+    .rnews-item {
+        width: 100%;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
 }

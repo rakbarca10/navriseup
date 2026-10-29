@@ -1,12 +1,15 @@
+/* ====================================================
+   DONATION TICKER BANNER
+   ==================================================== */
 .banner-container {
     width: 100%;
     overflow: hidden;
-    background-color: #d6ffd6;
-    padding: 10px 0;
-    margin-top: -10px;
-    margin-bottom: 20px;
+    background-color: #f3f9eb;
+    padding: 12px 0;
+    margin: 0;
     position: relative;
-    border: 1px solid #ddd;
+    border-top: 1px solid #d8ecc0;
+    border-bottom: 1px solid #d8ecc0;
 }
 
 .banner-content {
@@ -17,12 +20,18 @@
 
 .banner-item {
     white-space: nowrap;
-    padding: 0 50px;
-    font-size: 1.2rem;
-    color: #333;
+    padding: 0 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #3a5a14;
 }
 
-/* Infinite scroll animation */
+.banner-item::before {
+    content: "\2665  ";
+    color: #8cc63f;
+}
+
 @keyframes scroll-left {
     from {
         transform: translateX(100%);

@@ -1,95 +1,97 @@
+/* ====================================================
+   GALLERY PAGE (SMILE FOUNDATION REFERENCE STYLE)
+   ==================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
 }
 
-/* GALLERY */
 .gallery-sect {
     margin: 0 auto;
-    padding: 20px;
+    padding: 60px 24px 70px;
     max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    border-radius: 8px;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
-/* Style the heading */
 .heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 0 0 40px 0;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 3px solid #8cc63f;
     padding-bottom: 10px;
     width: fit-content;
 }
 
-/* Style the gallery container with grid */
 .gallery-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 22px;
     padding: 0;
 }
 
-/* Style each gallery item */
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    border-radius: 12px;
+    height: 240px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
 }
 
 .gallery-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
-    transition: opacity 0.3s ease;
+    transition: transform 0.45s ease;
 }
 
 .gallery-item:hover .gallery-img {
-    opacity: 0.9; 
+    transform: scale(1.05);
 }
 
-/* The Modal (Popup) */
+/* Modal */
 #imageModal.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Modal Content (Image) */
 .modal-content {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
-    object-fit: contain; /* Ensures the whole image is visible */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 750px;
+    object-fit: contain;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Close Button */
 .close-button {
     position: absolute;
     top: 15px;
@@ -103,106 +105,16 @@ html, body {
 
 .close-button:hover,
 .close-button:focus {
-    color: #bbb;
+    color: #8cc63f;
     text-decoration: none;
-    cursor: pointer;
 }
 
-/* Add Animation */
-.modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-/* Responsive media queries */
 @media (max-width: 768px) {
     .gallery-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-}
 
-@media (max-width: 480px) {
     .heading {
-        font-size: 2rem; 
+        font-size: 1.8rem;
     }
-    .gallery-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
-    }
-}
-
-/* scroll to top button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensure the button is above other elements */
-    overflow: hidden; /* Prevent overflow from causing extra space */
-}
-
-.scroll-btn {
-    background-color: #007bff; /* Blue background */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%; /* Makes the button circular */
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.scroll-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-.scroll-btn i {
-    font-size: 16px;
-}
-
-/* Responsive Scroll Button for smaller screens */
-@media (max-width: 400px) {
-    .scroll-to-top {
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .scroll-btn {
-        padding: 12px;
-        font-size: 18px;
-    }
-
-    .scroll-btn i {
-        font-size: 14px;
-    }
-}
-
-/* Whatsapp widget responsiveness */
-.elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    z-index: 999;
-    max-width: 100%; /* Ensure widget doesn't exceed screen width */
-    overflow: hidden; /* Prevent any overflow */
-}
-
-/* Responsive adjustment for WhatsApp widget */
-@media (max-width: 400px) {
-    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
-        bottom: 50px;
-        right: 15px;
-        max-width: 95%; /* Adjust for smaller screens */
-    }
-}
-
-/* Prevent horizontal overflow caused by any elements */
-body {
-    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
 }
