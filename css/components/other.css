@@ -73,8 +73,9 @@
 
 .other-img {
     width: 100%;
-    height: 220px;
+    height: 300px;
     object-fit: cover;
+    object-position: center 15%;
     border-radius: 0;
     margin-bottom: 0;
     display: block;
@@ -202,6 +203,6 @@
     }
 
     .other-img {
-        height: 210px;
+        height: 270px;
     }
 }
