@@ -70,5 +70,13 @@
   {
     "date": "2026-09-22",
     "caption": "A little late, but gratitude doesn't come with a deadline. 🙏 This Teachers' Day, we at Navriseup India Care Foundation took a moment to celebrate the educators who quietly shape futures — often with little recognition and even less resources. To every teacher who's ever believed in a child others gave up on, who's shown up despite the odds, and who's turned a classroom into a place of hope — thank you. Your impact outlasts the lesson plans and the school bell. Better late than never, but never too late to say it — Happy Teachers' Day. 🍎"
+  },
+  {
+    "date": "2026-10-28",
+    "caption": "Grateful hearts, healthier communities 💛 Navriseup India Care Foundation recently organised free medical camps in Kandivali and Thane, bringing check-ups, consultations, and health guidance closer to families who need them most. None of this would have been possible without our incredible doctors, medical staff, volunteers, partners, and every community member who showed up. Thank you for your time, care, and trust. 🙏 Together, we’re building a healthier tomorrow, one camp at a time."
+  },
+  {
+    "date": "2026-11-10",
+    "caption": "With the help of our wonderful volunteers, Navriseup India Care Foundation distributed ration packets to families in Aurangabad. 🌾 A ration kit may look simple, but for a family it means one less worry about the next meal. Seeing it reach their homes reminded us why we do this. A big thank you to everyone involved who gave their time and effort, and to everyone who supported this drive. None of this happens without you."
   }
 ]
